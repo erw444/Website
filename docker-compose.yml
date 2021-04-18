@@ -11,7 +11,7 @@ services:
     #    -DEUREKA_SERVER=http://discovery:8761/eureka
     #depends_on:
     #  - discovery
-  school-ui:
+  website-frontend:
     image: erw444/website-frontend
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery:8761/eureka
