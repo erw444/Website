@@ -1,0 +1,22 @@
+version: '3'
+services:
+  discovery:
+    image: erw444/discovery
+    ports:
+      - 8761:8761
+  #school-service:
+    #image: developer.okta.com/microservice-docker-school-service:0.0.1-SNAPSHOT
+    #environment:
+    #  - JAVA_OPTS=
+    #    -DEUREKA_SERVER=http://discovery:8761/eureka
+    #depends_on:
+    #  - discovery
+  school-ui:
+    image: erw444/website-frontend
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery:8761/eureka
+    restart: on-failure
+    depends_on:
+      - discovery
+    ports:
+      - 8080:5000
