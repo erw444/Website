@@ -1,0 +1,25 @@
+server:
+  port: 5000
+
+#ribbon:
+  #eureka:
+    #enabled: true
+ribbon:
+  http:
+    client:
+      enabled: true
+
+zuul:
+  routes:
+    blog:
+      path: /blog/**
+      service-id: BLOG
+      stripPrefix: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+spring:
+  application:
+    name: website-frontend

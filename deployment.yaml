@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: website-frontend
+  name: website-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website-frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: website-frontend
+    spec:
+      containers:
+      - image: erw444/website-frontend
+        name: website-frontend
+        resources: {}
+status: {}

@@ -1,0 +1,23 @@
+<main role="main" class="container" ng-controller="NewEntryController">
+	<div id="form-container" class="container">
+  <form ng-submit="submit()">
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input class="form-control" name="title" type="text" ng-model="model.blogTitle">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="body">Body:</label>
+      <input name="body" type="hidden" class="form-control">
+      	<div id="editor-container"class="form-control" ng-model="model.blogBody"></div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary" type="submit">Add Blog</button>
+    </div>
+  </form>
+</div>
+</main>
+
