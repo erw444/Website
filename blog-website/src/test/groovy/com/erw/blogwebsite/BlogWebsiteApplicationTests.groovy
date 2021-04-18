@@ -1,13 +1,10 @@
 package com.erw.blogwebsite
 
-import org.junit.Test
-import org.junit.runner.RunWith
+import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit4.SpringRunner
 
-@RunWith(SpringRunner)
 @SpringBootTest
-class SpringGroovyAngularjsApplicationTests {
+class BlogWebsiteApplicationTests {
 
 	@Test
 	void contextLoads() {

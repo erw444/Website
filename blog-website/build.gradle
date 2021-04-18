@@ -14,6 +14,8 @@ sourceCompatibility = '1.8'
 
 ext {
 	set('springCloudVersion', "2020.0.0-SNAPSHOT")
+	set('swaggerVersion', "2.9.2")
+	set('lombokVersion', "1.18.16")
 }
 
 repositories {
@@ -38,14 +40,25 @@ bootRun {
 
 dependencies {
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
-	
+
+	//Base
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.codehaus.groovy:groovy'
 	implementation 'com.h2database:h2'
 	implementation "org.liquibase:liquibase-core"
 	implementation 'javax.inject:javax.inject:1'
+
+	//Discovery Service
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+	//Swagger
+	implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
+	implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+	implementation "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.0")

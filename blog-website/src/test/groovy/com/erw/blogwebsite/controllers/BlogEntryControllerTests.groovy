@@ -1,13 +1,12 @@
 package com.erw.blogwebsite.controllers
 
+import com.erw.blogwebsite.domain.Blog
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test
-import org.mockito.InjectMocks
-import org.mockito.Mock
 import org.mockito.*
 
-import com.erw.blogwebsite.domain.Blog
+
 import com.erw.blogwebsite.service.BlogEntryService
 import static org.mockito.Mockito.*;
 

@@ -1,7 +1,8 @@
 package com.erw.blogwebsite.service
 
-import org.springframework.stereotype.Service
 import com.erw.blogwebsite.domain.Blog
+import org.springframework.stereotype.Service
+
 import com.erw.blogwebsite.domain.BlogRepo
 import javax.inject.Inject
 
