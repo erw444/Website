@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: discovery
+  name: discovery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: discovery
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: discovery
+    spec:
+      containers:
+      - image: erw444/discovery
+        name: discovery
+        resources: {}
+status: {}
