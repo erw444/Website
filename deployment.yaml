@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: blog-website
+  name: blog-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blog-website
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: blog-website
+    spec:
+      containers:
+      - image: erw444/blog-website
+        name: blog-website
+        resources: {}
+status: {}
