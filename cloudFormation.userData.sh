@@ -44,6 +44,11 @@ cd /home/ec2-user/Website/website-frontend
 gradle build
 sudo docker build --build-arg JAR_FILE=build/libs/*.jar -t erw444/website-frontend .
 
+#Build backend service
+cd /home/ec2-user/Website/blog-website
+gradle build
+sudo docker build --build-arg JAR_FILE=build/libs/*.jar -t erw444/blog-website .
+
 cd /home/ec2-user/Website
 sudo docker-compose up
 
@@ -77,5 +82,9 @@ cnZpY2UKY2QgL2hvbWUvZWMyLXVzZXIvV2Vic2l0ZS93ZWJzaXRlLWZyb250ZW5k
 L3NyYy9tYWluL3Jlc291cmNlcy9zdGF0aWMKbnBtIGluc3RhbGwKY2QgL2hvbWUv
 ZWMyLXVzZXIvV2Vic2l0ZS93ZWJzaXRlLWZyb250ZW5kCmdyYWRsZSBidWlsZApz
 dWRvIGRvY2tlciBidWlsZCAtLWJ1aWxkLWFyZyBKQVJfRklMRT1idWlsZC9saWJz
-LyouamFyIC10IGVydzQ0NC93ZWJzaXRlLWZyb250ZW5kIC4KCmNkIC9ob21lL2Vj
-Mi11c2VyL1dlYnNpdGUKc3VkbyBkb2NrZXItY29tcG9zZSB1cA==
+LyouamFyIC10IGVydzQ0NC93ZWJzaXRlLWZyb250ZW5kIC4KCiNCdWlsZCBiYWNr
+ZW5kIHNlcnZpY2UKY2QgL2hvbWUvZWMyLXVzZXIvV2Vic2l0ZS9ibG9nLXdlYnNp
+dGUKZ3JhZGxlIGJ1aWxkCnN1ZG8gZG9ja2VyIGJ1aWxkIC0tYnVpbGQtYXJnIEpB
+Ul9GSUxFPWJ1aWxkL2xpYnMvKi5qYXIgLXQgZXJ3NDQ0L2Jsb2ctd2Vic2l0ZSAu
+CgpjZCAvaG9tZS9lYzItdXNlci9XZWJzaXRlCnN1ZG8gZG9ja2VyLWNvbXBvc2Ug
+dXA=
