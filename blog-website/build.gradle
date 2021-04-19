@@ -45,7 +45,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.codehaus.groovy:groovy'
+
+	//database
 	implementation 'com.h2database:h2'
+	implementation 'org.postgresql:postgresql'
 	implementation "org.liquibase:liquibase-core"
 	implementation 'javax.inject:javax.inject:1'
 

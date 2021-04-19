@@ -1,14 +1,6 @@
 server:
   port: 5000
 
-#ribbon:
-  #eureka:
-    #enabled: true
-ribbon:
-  http:
-    client:
-      enabled: true
-
 zuul:
   routes:
     blog:

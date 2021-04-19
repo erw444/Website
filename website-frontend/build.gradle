@@ -26,9 +26,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.codehaus.groovy:groovy'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-	implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes'
-	implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes-ribbon'
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.0")
@@ -37,7 +35,7 @@ dependencies {
 }
 
 ext {
-	set('springCloudVersion', "Hoxton.BUILD-SNAPSHOT")
+	set('springCloudVersion', "Hoxton.SR10")
 	set('springCloudK8sVersion', '1.0.0.RELEASE')
 
 }
