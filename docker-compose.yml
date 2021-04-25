@@ -7,6 +7,7 @@ services:
   blog-website:
     image: erw444/blog-website  
     environment:
+      - SPRING_PROFILES_ACTIVE=dev
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery:8761/eureka
     depends_on:
       - discovery
