@@ -13,7 +13,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 ext {
-	set('springCloudVersion', "2020.0.0-SNAPSHOT")
+	set('springCloudVersion', "2020.0.2")
 	set('swaggerVersion', "2.9.2")
 	set('lombokVersion', "1.18.16")
 }
